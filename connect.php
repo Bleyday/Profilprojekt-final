@@ -1,14 +1,29 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$username = $_POST["benutzername"];
+$password = $_POST["passwort"];
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+/* Passwort Verschlüsselung */
+$hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
+$hash = password_hash($password, PASSWORD_BCRYPT, $hash_opts);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-?>
+$dbhost = 'localhost';
+$dbuser = "root";
+$dbpass = "";
+$dbname = "test";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
+
+if(! $conn ) {
+    die('Could not connect: '.mysql_error());
+}
+else{
+    $sql = "INSERT INTO anmeldedaten (Loginname, Passwort)
+    values ('$username','$$hash')";
+}
+if ($conn->query($sql)){
+    echo "Anmeldedaten wurden erfolgreich gespeichert!";
+}
+else
+    echo"Anmeldedaten konnten nicht gespeichert werden, versuchen Sie es nochmal";
+ 
+        
+    
