@@ -8,7 +8,7 @@ $hash = password_hash($password, PASSWORD_BCRYPT, $hash_opts);
 
 $dbhost = 'localhost';
 $dbuser = "root";
-$dbpass = "";
+$dbpass = "Haus2500";
 $dbname = "test";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
 
