@@ -11,18 +11,18 @@
 <!------------------------------- Login vielleicht? ---------------------------------->
     <form action="registertodb.php" method="post">
       <div class="login">
-        <label class="anzeige" for="benutzername"><b>Benutzername</b></label><br>
+        <label class="anzeige" for="benutzername"><b>Benutzername*</b></label><br>
         <input class="eingabefeld" type="text" placeholder="Username" name="benutzername" required><br>
-        <label class="anzeige" for="passwort"><b>Passwort</b></label><br>
-        <input class="eingabefeld" type="password" placeholder="Password" name="passwort"><br>
+        <label class="anzeige" for="passwort"><b>Passwort*</b></label><br>
+        <input class="eingabefeld" type="password" placeholder="Password" name="passwort" requiered><br>
         <label class="anzeige">
-          <input type="checkbox" class ="checking" checked="checked" name="remember"> Remember me
+          <input type="checkbox" class ="checking" checked="checked" name="remember" requiered> AGB gelesen?
         </label><br>
-        <input id ="submit" type="submit" value="Login">
+        <input id ="submit" type="submit" value="Register">
+        <p class="anzeige">* = erforderlich</p>
       </div>
     </form>
 <!----------------------------------------------------------------------------------->
-  Hallo
     </body>
     
 </html>
