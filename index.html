@@ -7,22 +7,19 @@
     <title>TAP-Manager</title>
   </head>
   <body>
+<nav class="navigation">
+<a class="logreg" href="registrierung.html">Registrieren</a>   
+<a class="logreg" href="login.html">Einloggen</a>    
+      
+</nav>
 <h1 id="sitetitle">TAP-Manager</h1>
-<!------------------------------- Login vielleicht? ---------------------------------->
-    <form action="registertodb.php" method="post">
-      <div class="login">
-        <label class="anzeige" for="benutzername"><b>Benutzername*</b></label><br>
-        <input class="eingabefeld" type="text" placeholder="Username" name="benutzername" required><br>
-        <label class="anzeige" for="passwort"><b>Passwort*</b></label><br>
-        <input class="eingabefeld" type="password" placeholder="Password" name="passwort" requiered><br>
-        <label class="anzeige">
-          <input type="checkbox" class ="checking" checked="checked" name="remember" requiered> AGB gelesen?
-        </label><br>
-        <input id ="submit" type="submit" value="Register">
-        <p class="anzeige">* = erforderlich</p>
-      </div>
-    </form>
-<!----------------------------------------------------------------------------------->
-    </body>
+    <div id="welcomebox">
+        <img id="welcomepic" src="img/safepw.jpg" alt="safekey">
+        <div class="infobox">
+        <p class="standarttext">Willkommen beim TAP-Manager!<br> Wir sind ihre Spezialisten, wenn es um sichere Lagerung ihrer Persönlichen Daten geht.</p>  
+        </div>
+    </div>
+
+  </body>
     
 </html>

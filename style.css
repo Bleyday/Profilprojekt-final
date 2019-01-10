@@ -49,3 +49,43 @@ body{
 #submit:hover {
   background-color: white;
 }
+.navigation{
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    background: #b30000;
+
+}
+.navigation a{
+    padding: 14px 16px;
+    color: white;
+}
+.logreg{
+    text-decoration: none;
+    float: right;    
+}
+#welcomepic{
+    height: auto;
+    width: 35%;
+    margin-left: 10px;
+    display: block;
+    position: relative;
+    float: left
+}
+.infobox{
+    position: relative;
+    display: inline-block;
+    width 65%;
+    margin-left: 20px;
+}
+#welcomebox{
+    float: left;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+.standarttext{
+    text-align: center;
+    color: white;
+    float: left;
+}
