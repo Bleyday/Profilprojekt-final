@@ -1,12 +1,3 @@
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>TAP-Manager</title>
-  </head>
-  <body>
-<h1 id="sitetitle">TAP-Manager</h1>
 <?php 
 $user = $_POST["benutzername"];
 $pass = $_POST["passwort"];
@@ -35,7 +26,18 @@ if(mysqli_query($conn, $createU)){
 else{
 	echo "Benutzer konnte nicht erstellt werden<br>" ;
     }
+//Hier endet PHP
 ?>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>TAP-Manager</title>
+  </head>
+  <body>
+<h1 id="sitetitle">TAP-Manager</h1>
+
 <form action="index.html">
     <input id = "submit" type="submit" value="Back">
 </form>   
