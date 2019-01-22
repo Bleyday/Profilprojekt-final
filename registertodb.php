@@ -3,14 +3,14 @@ $user = $_POST["benutzername"];
 $pass = $_POST["passwort"];
 
 $host = 'localhost';
-$createU = "CREATE USER '{$user}'@'{$host}' IDENTIFIED BY '{$pass}'"; //In einer Variable gespeichertes                                                                           MYSQL Befehl
+$createU = "CREATE USER '{$user}'@'{$host}' IDENTIFIED BY '{$pass}'"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
 $createDB = "CREATE DATABASE $user";
 $createTB = "CREATE TABLE $user.anmeldedaten(Benutzername VARCHAR(255), Passwort VARCHAR(255))";
 
 $dbuser = "root";
 $dbpass = "Haus2500";
 $dbhost ="localhost";
-$dbname ="mysql";
+$dbname ="test";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // Verbindung zur datenbank
 
 if(mysqli_query($conn, $createDB)){
@@ -43,6 +43,5 @@ else{
 <form action="index.html">
     <input id = "submit" type="submit" value="Back">
 </form>   
-    </body>
-    
-</html>
+  </body>
+    </html>
