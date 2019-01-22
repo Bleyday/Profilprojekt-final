@@ -4,11 +4,15 @@ body{
     padding: 0;
     margin: 0;
     background-image: url("img/colorfade.png");
+    color: white;
 }
 #sitetitle{
     color: white;
     text-align: center;
-    font-size: 3em
+    font-size: 3em;
+}
+#sitetitle a{
+    text-decoration: none;
 }
 .login{
     color: white;
