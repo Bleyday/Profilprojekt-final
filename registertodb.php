@@ -28,6 +28,7 @@ else{
     }
 //Hier endet der PHP Teil
 ?>
+
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -36,7 +37,9 @@ else{
     <title>TAP-Manager</title>
   </head>
   <body>
-<h1 id="sitetitle"><a href="index.html">TAP-Manager</a></h1>
+
+<h1 id="sitetitle">TAP-Manager</h1>
+
 <form action="index.html">
     <input id = "submit" type="submit" value="Back">
 </form>   
