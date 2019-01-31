@@ -3,19 +3,25 @@ $user = $_POST["benutzername"];
 $pass = $_POST["passwort"];
 
 $host = 'localhost';
-$createU = "CREATE USER '{$user}'@'{$host}' IDENTIFIED BY '{$pass}'"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
+
+$hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
+$hashpw = password_hash($pass, PASSWORD_DEFAULT);
+
+$createU = "INSERT INTO data (username,password) VALUES ('{$user}','{$hashpw}')"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
 $createDB = "CREATE DATABASE $user";
 $createTB = "CREATE TABLE $user.anmeldedaten(Benutzername VARCHAR(255), Passwort VARCHAR(255))";
 
 $dbuser = "root";
-$dbpass = "Haus2500";
+$dbpass = "";
 $dbhost ="localhost";
-$dbname ="test";
+$dbname ="accounts";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // Verbindung zur datenbank
 
 if(mysqli_query($conn, $createDB)){
     echo "Datenbank für $user erstellt<br>";
-    $dbname = $user;
+}
+else{
+    echo " DB Konnte nicht erstelt werden";
 }
 mysqli_query($conn,$createTB);
 if(mysqli_query($conn, $createU)){
@@ -42,6 +48,9 @@ else{
 
 <form action="index.html">
     <input id = "submit" type="submit" value="Back">
-</form>   
+</form>
+<form action="login.html">
+    <input id = "submit" type="submit" value="Login">
+</form> 
   </body>
     </html>
