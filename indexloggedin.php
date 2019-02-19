@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
+?>
+    <!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8" />
@@ -8,8 +12,8 @@
   </head>
   <body>
 <nav class="navigation">
-<a class="logreg" href="registrierung.html">Registrieren</a>   
-<a class="logreg" href="login.html">Einloggen</a>    
+    <a class="logreg" href="welcome.php"> <?= $_SESSION["user"] ?></a>   
+    <a class="logreg" href="logout.php">Ausloggen</a>    
       
 </nav>
 <h1 id="sitetitle">TAP-Manager</h1>
@@ -23,3 +27,10 @@
   </body>
     
 </html>
+<?php
+} else{
+    header("Location:index.html");
+}
+?>
+ 
+
