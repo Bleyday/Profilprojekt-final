@@ -7,7 +7,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="user_style.css">
     <title>TAP-Manager</title>
   </head>
 <body>
@@ -20,8 +20,8 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
     <h1 id="sitetitle">Willkommen <?= $_SESSION["user"]?></h1>
     
     <div class="sidenav">
-        <a href="#">Text1</a>
-        <a href="#">Text2</a>
+        <a href="addData.php">Accountdaten hinzufügen</a>
+        <a href="">Accountdaten</a>
         <a href="#">Text3</a>
         <a href="#">Text4</a>
         <a href="#">Text5</a>

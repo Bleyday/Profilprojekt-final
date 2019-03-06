@@ -21,7 +21,7 @@ if(mysqli_query($conn, $createDB)){
     echo "Datenbank für $user erstellt<br>";
 }
 else{
-    echo " DB Konnte nicht erstelt werden";
+    echo " DB Konnte nicht erstelt werden<br>";
 }
 mysqli_query($conn,$createTB);
 if(mysqli_query($conn, $createU)){

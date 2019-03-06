@@ -31,6 +31,6 @@ if ($rownumb == 0 && password_verify($_SESSION["pass"], $titlestring)){
 }
 else{
     include "login.html";
-    echo "INVALID PASSWORD OR USERNAME";
-}
+    }?>
+    <p class="anzeige">INVALID PASSWORD OR USERNAME</p>
 

@@ -8,16 +8,16 @@ $hash = password_hash($password, PASSWORD_BCRYPT, $hash_opts);
 
 $dbhost = 'localhost';
 $dbuser = "root";
-$dbpass = "Haus2500";
-$dbname = "test";
+$dbpass = "";
+$dbname = "Kokonattu";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
 
 if(! $conn ) {
-    die('Could not connect: '.mysql_error());
+    die('Could not connect: '.mysqli_error());
 }
 else{
-    $sql = "INSERT INTO anmeldedaten (Loginname, Passwort)
-    values ('$username','$$hash')";
+    $sql = "INSERT INTO anmeldedaten (Benutzername, Passwort)
+    values ('$username','$password')";
 }
 if ($conn->query($sql)){
     echo "Anmeldedaten wurden erfolgreich gespeichert!";
