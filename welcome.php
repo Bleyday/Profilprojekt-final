@@ -11,23 +11,16 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
     <title>TAP-Manager</title>
   </head>
 <body>
-    <nav class="navigation">
-        <a class="logreg" href=""> <?= $_SESSION["user"] ?></a> <!-- nötig?????--> 
-        <a class="logreg" href="logout.php">Ausloggen</a>
-        <a class="logreg" href="indexloggedin.php">Startseite</a>
+    <nav id="navigation">
+        <a class="btn" href="logout.php">Ausloggen</a>
+        <a class="btn active" href=""> <?= $_SESSION["user"] ?></a> <!-- nötig?????-->        
+        <a class="btn" href="indexloggedin.php">Startseite</a>
+		<a class="btn2" href="addData.php">Accountdaten hinzufügen</a>
     </nav>
     
     <h1 id="sitetitle">Willkommen <?= $_SESSION["user"]?></h1>
     
-    <div class="sidenav">
-        <a href="addData.php">Accountdaten hinzufügen</a>
-        <a href="">Accountdaten</a>
-        <a href="#">Text3</a>
-        <a href="#">Text4</a>
-        <a href="#">Text5</a>
-        <a href="#">Text6</a>
-    </div>
-    
+    <?php include "showData.php"; ?>
 </body>
     
 </html>

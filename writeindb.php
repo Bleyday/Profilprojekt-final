@@ -1,6 +1,8 @@
 <?php
-$username = $_POST["benutzername"];
-$password = $_POST["passwort"];
+session_start();
+if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
+$username = $_POST["eingabeuser"];
+$password = $_POST["eingabepass"];
 
 /* Passwort Verschlüsselung */
 $hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
@@ -9,7 +11,7 @@ $hash = password_hash($password, PASSWORD_BCRYPT, $hash_opts);
 $dbhost = 'localhost';
 $dbuser = "root";
 $dbpass = "";
-$dbname = "Kokonattu";
+$dbname = $_SESSION['user'];
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
 
 if(! $conn ) {
@@ -24,6 +26,7 @@ if ($conn->query($sql)){
 }
 else
     echo"Anmeldedaten konnten nicht gespeichert werden, versuchen Sie es nochmal";
+}
  
         
     

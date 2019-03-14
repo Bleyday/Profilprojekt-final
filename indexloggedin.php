@@ -11,10 +11,9 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
     <title>TAP-Manager</title>
   </head>
   <body>
-<nav class="navigation">
-    <a class="logreg" href="welcome.php"> <?= $_SESSION["user"] ?></a>   
-    <a class="logreg" href="logout.php">Ausloggen</a>    
-      
+<nav id="navigation">
+    <a class="btn" href="welcome.php"> <?= $_SESSION["user"] ?></a>   
+    <a class="btn" href="logout.php">Ausloggen</a>     
 </nav>
 <h1 id="sitetitle">TAP-Manager</h1>
     <div id="welcomebox">
@@ -22,6 +21,28 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
         <div class="infobox">
         <p class="standarttext">Willkommen beim TAP-Manager!<br> Wir sind ihre Spezialisten, wenn es um sichere Lagerung ihrer Persönlichen Daten geht.</p>  
         </div>
+    </div>
+    
+    <div class="infobox2">
+        <p class="mini_ueberschrift">Wofür steht TAP?</p>
+        <p class="standarttext">
+        TAP steht für Anfangsbuchstaben der Entwickler <b>T</b>jen Kokot, <b>A</b>ndré Siggelkow und
+        <b>P</b>eirui Zhang. (Genaueres zu uns finden Sie unter "Entwickler".). (Genaueres zu uns finden Sie unter "Entwickler".)
+        </p>
+    </div>
+      
+    <div class="infobox2">
+        <p class="mini_ueberschrift">Wie funktioniert unser Tool?</p>
+        <p class="standarttext">
+        Unser Tool zur Sicherung Ihrer sensiblen Login Daten, arbeitet mit einer MySQL Datenbank, wo Ihre Daten verschlüsselt auf einem mit Firewall abgesicherten Server liegt und einem HTTPS Protokoll [...].
+        </p>
+    </div>
+      
+    <div class="infobox2">
+        <p class="mini_ueberschrift">Wie werden meine Daten genau gesichert?</p>
+        <p class="standarttext">
+        Unser Tool zur Sicherung Ihrer sensiblen Login Daten, arbeitet mit einer MySQL Datenbank, wo Ihre Daten verschlüsselt auf einem mit Firewall abgesicherten Server liegt und einem HTTPS Protokoll [...].
+        </p>
     </div>
 
   </body>

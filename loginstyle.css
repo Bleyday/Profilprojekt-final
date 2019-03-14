@@ -56,3 +56,32 @@ body{
 }
 #submit:hover {
   background-color: white;
+}
+#navigation{
+    height: 50px;
+    background: #b30000;
+}
+#navigation a{
+    margin: 0 2px;
+    padding: 14px 16px;
+    color: white;
+    font-weight: bold;
+    height: 22px;
+}
+.active, .btn:hover{
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+}
+.active, .btn2:hover{
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+}
+.btn{
+    text-decoration: none;
+    float: right;    
+}
+.btn2{
+    text-decoration: none;
+    float: left;

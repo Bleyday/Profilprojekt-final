@@ -11,9 +11,6 @@ body{
     text-align: center;
     font-size: 3em;
 }
-#sitetitle a{
-    text-decoration: none;
-}
 .login{
     color: white;
     padding: 10px;
@@ -53,20 +50,34 @@ body{
 #submit:hover {
   background-color: white;
 }
-.navigation{
+#navigation{
     height: 50px;
-    border-width: 2px;
-    border-style: solid;
     background: #b30000;
-
 }
-.navigation a{
+#navigation a{
+    margin: 0 2px;
     padding: 14px 16px;
     color: white;
+    font-weight: bold;
+    height: 22px;
 }
-.logreg{
+.active, .btn:hover{
+    border-radius: 50%;
+    background-color: green;
+    color: red;
+}
+.active, .btn2:hover{
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+}
+.btn{
     text-decoration: none;
     float: right;    
+}
+.btn2{
+    text-decoration: none;
+    float: left;
 }
 #welcomepic{
     height: auto;
@@ -110,4 +121,19 @@ body{
     color: white;
     font-size: larger;
     font-weight: bold;
+}
+#go_back{
+    padding: 0;
+    margin: 8px;
+    height: 35px;
+    width: 180px;
+    border-style: ridge;
+    border-width: 3px;
+    border-color: black;
+    background-color: #a3d2ff;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
 }

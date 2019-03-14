@@ -1,3 +1,13 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>TAP-Manager</title>
+  </head>
+  <body>
+
+<h1 id="sitetitle">TAP-Manager</h1>
 <?php 
 $user = $_POST["benutzername"];
 $pass = $_POST["passwort"];
@@ -18,14 +28,14 @@ $dbname ="accounts";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // Verbindung zur datenbank
 
 if(mysqli_query($conn, $createDB)){
-    echo "Datenbank für $user erstellt<br>";
+   ?><p class="standarttext"> <?= "Datenbank für $user erstellt<br>";?></p><?php
 }
 else{
-    echo " DB Konnte nicht erstelt werden<br>";
+   ?><p class="standarttext"> <?= "DB Konnte nicht erstelt werden<br>";?></p><?php
 }
 mysqli_query($conn,$createTB);
 if(mysqli_query($conn, $createU)){
-	echo 'Benutzer wurde erstellt';
+?> <p class="standarttext"> <?= 'Benutzer wurde erstellt';?> </p><?php
     // Rechte für den neuen Benutzer  
     mysqli_query($conn,"GRANT ALL PRIVILEGES ON $user.anmeldedaten to '$user'@''$host'");
 }
@@ -35,22 +45,12 @@ else{
 //Hier endet der PHP Teil
 ?>
 
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>TAP-Manager</title>
-  </head>
-  <body>
-
-<h1 id="sitetitle">TAP-Manager</h1>
 
 <form action="index.html">
-    <input id = "submit" type="submit" value="Back">
+    <input id = "go_back" type="submit" value="Back">
 </form>
 <form action="login.html">
-    <input id = "submit" type="submit" value="Login">
+    <input id = "go_back" type="submit" value="Login">
 </form> 
   </body>
     </html>
