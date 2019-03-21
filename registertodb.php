@@ -11,13 +11,14 @@
 <?php 
 $user = $_POST["benutzername"];
 $pass = $_POST["passwort"];
+$email = $_POST["email"];
 
 $host = 'localhost';
 
 $hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
 $hashpw = password_hash($pass, PASSWORD_DEFAULT);
 
-$createU = "INSERT INTO data (username,password) VALUES ('{$user}','{$hashpw}')"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
+$createU = "INSERT INTO data (username,password,email) VALUES ('{$user}','{$hashpw}','{$email}')"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
 $createDB = "CREATE DATABASE $user";
 $createTB = "CREATE TABLE $user.anmeldedaten(Benutzername VARCHAR(255), Passwort VARCHAR(255))";
 
