@@ -53,6 +53,10 @@ body{
 #navigation{
     height: 50px;
     background: #b30000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
 }
 #navigation a{
     margin: 0 2px;
@@ -85,7 +89,8 @@ body{
     margin-left: 10px;
     display: block;
     position: relative;
-    float: left
+    float: left;
+    z-index: -1;
 }
 .infobox{
     position: relative;
@@ -94,8 +99,8 @@ body{
     margin-left: 10px;
 }
 .infobox2{
-    position:relative;
-    display: inline-block;
+    position: relative;
+    display: inline-block;;
     margin: 0 10px;
     margin-top: 20px;
     width: 31.96%;
@@ -115,6 +120,8 @@ body{
 .standarttext{
     text-align: center;
     color: white;
+    display: inline-block;
+  
 }
 .mini_ueberschrift{
     text-align: center;
@@ -136,4 +143,27 @@ body{
     font-weight: bold;
     cursor: pointer;
     text-align: center;
+}
+.footer{
+    text-align: center;
+    height: 200px;
+    background-color: #b7b7b7;  
+}
+.hr{
+    margin-bottom: 25%;
+}
+.hr2{
+    margin-top: 70px;
+}
+.footertext a{
+    text-decoration: none;
+    color: black;
+}
+.icons{
+
+    
+}
+.footertext{
+    color: black;
+    display: inline-block;
 }
