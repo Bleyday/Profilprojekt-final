@@ -25,6 +25,7 @@ body{
     width: 15%;
     margin: auto;
     text-align: center;
+    min-height: 275px;
 }
 .eingabefeld{
     border-style: solid;
@@ -53,6 +54,7 @@ body{
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+    max-width: 70%;
 }
 #submit:hover {
   background-color: white;
@@ -66,17 +68,13 @@ body{
     padding: 14px 16px;
     color: white;
     font-weight: bold;
-    height: 22px;
+    height: 10px;
 }
 .active, .btn:hover{
-    border-radius: 50%;
-    background-color: green;
-    color: black;
+    border-bottom: 6px solid green;
 }
 .active, .btn2:hover{
-    border-radius: 50%;
-    background-color: green;
-    color: black;
+    border-bottom: 6px solid green;
 }
 .btn{
     text-decoration: none;

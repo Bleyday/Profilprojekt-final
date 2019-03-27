@@ -13,8 +13,12 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
   <body>
 <nav id="navigation">
     <a class="btn" href="welcome.php"> <?= $_SESSION["user"] ?></a>   
-    <a class="btn" href="logout.php">Ausloggen</a>     
+    <a class="btn" href="logout.php">Ausloggen</a>
+    <a class="btn2 active" href="index.html">Startseite</a>       
+    <a class="btn2" href="">Die Entwickler</a>       
+    <a class="btn2" href="">Das Tool</a>
 </nav>
+<div class="hr2"></div>
 <h1 id="sitetitle">TAP-Manager</h1>
     <div id="welcomebox">
         <img id="welcomepic" src="img/safepw.jpg" alt="safekey">
@@ -44,7 +48,11 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
         Unser Tool zur Sicherung Ihrer sensiblen Login Daten, arbeitet mit einer MySQL Datenbank, wo Ihre Daten verschlüsselt auf einem mit Firewall abgesicherten Server liegt und einem HTTPS Protokoll [...].
         </p>
     </div>
-
+<div class="hr"></div>
+<footer class="footer">
+    <p class="footertext">© 2019 - TAP | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p><br>
+    <img class="icons" src="img/email.png"> <p class="footertext">peirui.z@gmx.de</p>
+</footer>
   </body>
     
 </html>

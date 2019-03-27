@@ -14,23 +14,24 @@ body{
 #navigation{
     height: 50px;
     background: #b30000;
+    position: fixed;
+    top:0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
 }
 #navigation a{
     margin: 0 2px;
     padding: 14px 16px;
     color: white;
     font-weight: bold;
-    height: 22px;
+    height: 10px;
 }
 .active, .btn:hover{
-    border-radius: 50%;
-    background-color: green;
-    color: red;
+   border-bottom: 6px solid green;
 }
 .active, .btn2:hover{
-    border-radius: 50%;
-    background-color: green;
-    color: black;
+  border-bottom: 6px solid green;
 }
 .btn{
     text-decoration: none;
@@ -39,23 +40,6 @@ body{
 .btn2{
     text-decoration: none;
     float: left;
-}
-.sidenav{
-    padding: 0;
-    margin-top: -109px;
-    height: 100%;
-    width: 200px;
-    background-color: black;
-}
-.sidenav a{
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    display: block;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
 }
 .login_daten_frame{
     color: white;
@@ -92,4 +76,23 @@ body{
     margin: 7px;
     padding: 5px;
     background-color: #a3d2ff;
+}
+.hr2{
+    margin-top: 70px;
+}
+.hr{
+    margin-bottom: 25%;
+}
+.footertext a{
+    text-decoration: none;
+    color: black;
+}
+.footertext{
+    color: black;
+    display: inline-block;
+}
+.footer{
+    text-align: center;
+    height: 200px;
+    background-color: #b7b7b7;  
 }

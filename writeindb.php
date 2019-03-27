@@ -22,11 +22,13 @@ else{
     values ('$username','$password')";
 }
 if ($conn->query($sql)){
-    echo "Anmeldedaten wurden erfolgreich gespeichert!";
+    header ("Location:addData.php");
+    ?><p> Anmeldedaten wurden erfolgreich gespeichert</p><?php
+
 }
 else
     echo"Anmeldedaten konnten nicht gespeichert werden, versuchen Sie es nochmal";
 }
  
-        
+?>
     

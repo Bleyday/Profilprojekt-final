@@ -13,15 +13,15 @@ echo "<table>";
 echo "<tr><th>Benutzername</th><th>Passwort</th></tr>";
 
 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    $pwarray[] = $row["Passwort"];
+    $pwclear = implode(",", $pwarray);
     echo "<tr><td>";
     echo $row ['Benutzername'];
-    echo "</td><td>";
-    echo $row ['Passwort'];
-    echo "</td></tr>";
+    echo "</td><td><input class='pw_field' value='$pwclear' type='password' readonly>";
+    echo "</td></tr>"; 
 }
+    echo "</table>";
 }
-echo "</table>";
-
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -30,10 +30,17 @@ echo "</table>";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         table{
-            border: 2px solid red;
             text-align: center;
             margin: 0 auto;
             margin-top: 100px;
+            height: 50px;
+            font-size: 18pt;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        th, td{
+            border: 1px solid #ddd;
+            padding: 8px;
         }
         body{
             font-size: 11pt;
@@ -43,9 +50,25 @@ echo "</table>";
             background-image: url("img/colorfade.png");
             color: white;
         }
+        .pwfield{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
       </style>
+      <script>
+      function ShowPW() {
+          var x = document.getElementsByClassName("pw_field");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+      </script>
     <title>TAP-Manager</title>
   </head>
 <body>
+    <input class="showpw" type="checkbox" onclick="ShowPW()">Show Password
 </body>
 </html>
