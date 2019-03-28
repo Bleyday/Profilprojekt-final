@@ -26,7 +26,10 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
             <label class="anzeige" for="benutzername1"><b>Benutzername</b></label><br>
             <input class="eingabefeld" type="text" placeholder="Username" name="eingabeuser" required><br>
             <label class="anzeige" for="passwort"><b>Passwort</b></label><br>
-            <input class="eingabefeld" type="password" placeholder="Password" name="eingabepass" requiered><br>
+            <input class="eingabefeld" type="password" placeholder="Password" name="eingabepass" requiered>
+            <br>
+            <label class="anzeige" for="website"><b>Für Website</b></label><br>
+            <input class="eingabefeld" type="text" placeholder="Website" name="website"><br>
 
             <input class="submit" type="submit" value="Eintragen">
         </div>

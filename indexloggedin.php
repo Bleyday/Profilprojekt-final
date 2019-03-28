@@ -15,7 +15,8 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
     <a class="btn" href="welcome.php"> <?= $_SESSION["user"] ?></a>   
     <a class="btn" href="logout.php">Ausloggen</a>
     <a class="btn2 active" href="index.html">Startseite</a>       
-    <a class="btn2" href="">Die Entwickler</a>       
+    <a class="btn2" href="die%20_entwickler.html">
+    Die Entwickler</a>       
     <a class="btn2" href="">Das Tool</a>
 </nav>
 <div class="hr2"></div>
@@ -52,6 +53,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
 <footer class="footer">
     <p class="footertext">© 2019 - TAP | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p><br>
     <img class="icons" src="img/email.png"> <p class="footertext">peirui.z@gmx.de</p>
+    <img src="https://img.icons8.com/ios/16/000000/phone-filled.png"><p class="footertext">1234-1234567</p><br>
 </footer>
   </body>
     

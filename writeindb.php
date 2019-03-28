@@ -3,6 +3,7 @@ session_start();
 if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
 $username = $_POST["eingabeuser"];
 $password = $_POST["eingabepass"];
+$website = $_POST["website"];
 
 /* Passwort Verschlüsselung */
 $hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
@@ -18,8 +19,8 @@ if(! $conn ) {
     die('Could not connect: '.mysqli_error());
 }
 else{
-    $sql = "INSERT INTO anmeldedaten (Benutzername, Passwort)
-    values ('$username','$password')";
+    $sql = "INSERT INTO anmeldedaten (Benutzername, Passwort,Website)
+    values ('$username','$password','$website')";
 }
 if ($conn->query($sql)){
     header ("Location:addData.php");

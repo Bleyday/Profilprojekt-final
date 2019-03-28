@@ -10,7 +10,7 @@ $sqlget = "SELECT * FROM anmeldedaten";
 $sqldata = mysqli_query($conn, $sqlget);
 
 echo "<table>";
-echo "<tr><th>Benutzername</th><th>Passwort</th></tr>";
+echo "<tr><th>Benutzername</th><th>Passwort</th><th>Für Website</th></tr>";
 
 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
     $pwarray[] = $row["Passwort"];
@@ -18,7 +18,9 @@ while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
     echo "<tr><td>";
     echo $row ['Benutzername'];
     echo "</td><td><input class='pw_field' value='$pwclear' type='password' readonly>";
-    echo "</td></tr>"; 
+    echo "</td><td>";
+    echo $row ['Website'];
+    
 }
     echo "</table>";
 }
@@ -54,12 +56,11 @@ while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
             width: 100%;
             box-sizing: border-box;
         }
-
       </style>
       <script>
       function ShowPW() {
           var x = document.getElementsByClassName("pw_field");
-          if (x.type === "password") {
+          if (x.type == "password") {
             x.type = "text";
           } else {
             x.type = "password";

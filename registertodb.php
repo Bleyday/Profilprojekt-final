@@ -20,7 +20,7 @@ $hashpw = password_hash($pass, PASSWORD_DEFAULT);
 
 $createU = "INSERT INTO data (username,password,email) VALUES ('{$user}','{$hashpw}','{$email}')"; //In einer Variable gespeicherter                                                                           MYSQL Befehl
 $createDB = "CREATE DATABASE $user";
-$createTB = "CREATE TABLE $user.anmeldedaten(Benutzername VARCHAR(255), Passwort VARCHAR(255))";
+$createTB = "CREATE TABLE $user.anmeldedaten(Benutzername VARCHAR(255), Passwort VARCHAR(255), Website VARCHAR(255))";
 
 $dbuser = "root";
 $dbpass = "";
