@@ -22,12 +22,14 @@ if (isset($_SESSION["login"]) && $_SESSION["login"] =="verified"){
     
     <?php include "showData.php"; ?>
 
+
 <div class="hr"></div>
 </body>
  <footer class="footer">
-    <p class="footertext">© 2019 - TAP | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p><br>
-    <img class="icons" src="img/email.png"> <p class="footertext">peirui.z@gmx.de</p>
-</footer>   
+    <p class="footertext">© 2019 - TAP | <a href="#">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p><br>
+    <img class="icons" src="img/email.png"> <p class="footertext"><p class="footertext">beispiel@email.de</p><br>
+    <img src="https://img.icons8.com/ios/16/000000/phone-filled.png"><p class="footertext">1234-1234567</p><br>
+</footer>  
 </html>
 <?php
 } else{

@@ -20,6 +20,7 @@ body{
     width: 100%;
     z-index: 1;
 }
+
 #navigation a{
     margin: 0 2px;
     padding: 14px 16px;
@@ -95,4 +96,7 @@ body{
     text-align: center;
     height: 200px;
     background-color: #b7b7b7;  
+}
+.footertext a:hover{
+    color: green;
 }

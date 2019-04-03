@@ -9,20 +9,6 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $sqlget = "SELECT * FROM anmeldedaten";
 $sqldata = mysqli_query($conn, $sqlget);
 
-echo "<table>";
-echo "<tr><th>Benutzername</th><th>Passwort</th><th>Für Website</th></tr>";
-
-while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
-    $pwarray[] = $row["Passwort"];
-    $pwclear = implode(",", $pwarray);
-    echo "<tr><td>";
-    echo $row ['Benutzername'];
-    echo "</td><td><input class='pw_field' value='$pwclear' type='password' readonly>";
-    echo "</td><td>";
-    echo $row ['Website'];
-    
-}
-    echo "</table>";
 }
 ?>
 <!DOCTYPE html>
@@ -52,24 +38,43 @@ while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
             background-image: url("img/colorfade.png");
             color: white;
         }
-        .pwfield{
+        #password_field{
             width: 100%;
             box-sizing: border-box;
         }
-      </style>
-      <script>
-      function ShowPW() {
-          var x = document.getElementsByClassName("pw_field");
-          if (x.type == "password") {
-            x.type = "text";
-          } else {
-            x.type = "password";
-          }
+        #showpw{
+            margin-left: 50%;
         }
-      </script>
+        .standarttext{
+            text-align: center;
+        }
+      </style>
+      
     <title>TAP-Manager</title>
   </head>
 <body>
-    <input class="showpw" type="checkbox" onclick="ShowPW()">Show Password
+    
+<?php 
+
+echo "<table>";
+echo "<tr><th>Benutzername</th><th>Passwort</th><th>Für Website</th></tr>";
+
+while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+    $pwarray[] = $row["Passwort"];
+    $pwclear = implode(",", $pwarray);
+    echo "<tr><td>";
+    echo $row ['Benutzername'];
+    echo "</td><td><input class='password_field' value='$pwclear' type='password' readonly>";
+    $trashcan = array_shift($pwarray); //Wirft den letzten Wert aus der Passwort-Liste heraus
+    echo "</td><td>";
+    echo $row ['Website'];
+    
+}
+    echo "</table>";?>
+    <input id='showpw' type='checkbox' onclick='Show_Password()'>Passwörter anzeigen
+    <script language="javascript" src="jvs.js">
+    
+</script>
+        <p class="standarttext"><b>Hinweis</b><br>Wir empfehlen Ihnen, sich nach jedem Besuch oben Rechts wieder auszuloggen, damit ihre Daten nicht vom nächsten Benutzer wieder eingesehen werden können.</p>
 </body>
 </html>
