@@ -179,7 +179,7 @@ body{
     text-align: justify;
     color: white;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 100px;
 }
 a{
     color:  white;
@@ -189,4 +189,9 @@ a:hover{
 }
 .datenschutz_box{
     margin: 0 10px;
+}
+#entwicklerbox{
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%
 }

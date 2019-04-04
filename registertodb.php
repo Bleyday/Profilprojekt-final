@@ -15,7 +15,7 @@ $email = $_POST["email"];
 
 $host = 'localhost';
 
-$hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
+//$hash_opts = array("cost" => 15, "salt"=> "this is my salt, that I use for salting");
 $hashpw = password_hash($pass, PASSWORD_DEFAULT);
 
 $createU = "INSERT INTO data (username,password,email) VALUES ('{$user}','{$hashpw}','{$email}')"; //In einer Variable gespeicherter                                                                           MYSQL Befehl

@@ -55,26 +55,27 @@ $sqldata = mysqli_query($conn, $sqlget);
 <body>
     
 <?php 
-
 echo "<table>";
 echo "<tr><th>Benutzername</th><th>Passwort</th><th>Für Website</th></tr>";
-
+    
 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
-    $pwarray[] = $row["Passwort"];
-    $pwclear = implode(",", $pwarray);
+    $pwarray[] = $row["Passwort"];// Holt die Passwörter aus der Datenbank in eine Liste
+    $pwclear = implode(",", $pwarray); //Array in String Konvertierung
     echo "<tr><td>";
     echo $row ['Benutzername'];
     echo "</td><td><input class='password_field' value='$pwclear' type='password' readonly>";
-    $trashcan = array_shift($pwarray); //Wirft den letzten Wert aus der Passwort-Liste heraus
+    $trashcan = array_shift($pwarray); //Wirft den letzten Wert aus der Passwort-Liste heraus, damit nicht in der nächsten Zeile nicht das Passwort von der Zeile darüber steht
     echo "</td><td>";
     echo $row ['Website'];
     
 }
     echo "</table>";?>
-    <input id='showpw' type='checkbox' onclick='Show_Password()'>Passwörter anzeigen
+    
     <script language="javascript" src="jvs.js">
+        
     
 </script>
+    <input id='showpw' type='checkbox' onclick='Show_Password()'>Passwörter anzeigen
         <p class="standarttext"><b>Hinweis</b><br>Wir empfehlen Ihnen, sich nach jedem Besuch oben Rechts wieder auszuloggen, damit ihre Daten nicht vom nächsten Benutzer wieder eingesehen werden können.</p>
 </body>
 </html>
